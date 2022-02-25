@@ -1,5 +1,4 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
-import Orphanage from "../../models/Orphanage";
 
 export class createImages1602810038509 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {

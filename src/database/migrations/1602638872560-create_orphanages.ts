@@ -1,5 +1,4 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
-import { query } from "express";
 
 export class createOrphanages1602638872560 implements MigrationInterface {
   //executar
@@ -42,6 +41,10 @@ export class createOrphanages1602638872560 implements MigrationInterface {
           },
           {
             name: "opening_hours",
+            type: "varchar",
+          },
+          {
+            name: "opening_hourssss",
             type: "varchar",
           },
           {

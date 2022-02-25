@@ -12,7 +12,6 @@ import Image from "./Image";
 export default class Orphanage {
   @PrimaryGeneratedColumn("increment")
   id: number;
-
   @Column()
   name: string;
   @Column()
@@ -27,8 +26,8 @@ export default class Orphanage {
   opening_hours: string;
   @Column()
   open_on_weekends: boolean;
-
-  @OneToMany(() => Image, (image) => image.orphanage, {
+  //prettier-ignore
+  @OneToMany(() => Image, image => image.orphanage, {
     cascade: ["insert", "update"],
   })
   @JoinColumn({ name: "orphanage_id" })
